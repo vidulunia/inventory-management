@@ -1,0 +1,40 @@
+<form [formGroup]="registerForm" (ngSubmit)="reg($event)" class="border border-dark p-3 rounded-3">
+    <div class="row g-0">
+        <div class="col text-center" style="width: 5px;">
+            <span class="fs-4">REGISTER FORM</span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <label for="name" class="form-label">NAME </label>
+            <input type="text" class="form-control" id="name" formControlName="name">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <label for="username" class="form-label">USERNAME </label>
+            <input type="text" class="form-control" id="username" formControlName="username">
+            <div class="form-text"></div>
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <label for="password" class="form-label">PASSWORD </label>
+            <input type="password" value="FakePSW" class="form-control" id="password" formControlName="password">
+            <div class="form-text"></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6 offset-3">
+            <div class="d-grid">
+                <button type="submit" style="background-color: rgb(183, 179, 233);">SUBMIT</button>
+            </div>
+        </div>
+    </div>
+    <div>
+        <br>
+        <span style="text-align: center;" class="text-xl">Already registered?<a href="/login"
+                style="text-decoration:underline;"> Login</a></span>
+    </div>
+</form>

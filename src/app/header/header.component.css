@@ -1,0 +1,14 @@
+form {
+    position: absolute;
+    right: 200px
+}
+
+.logreg {
+    position: absolute;
+    margin-left: 1700px;
+}
+
+.logout {
+    color: black;
+    margin-left: 1050px;
+}

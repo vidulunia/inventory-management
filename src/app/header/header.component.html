@@ -1,0 +1,35 @@
+<mat-toolbar style="background-color: rgb(155, 155, 219);">
+
+    <button routerLink="/homepage"><mat-icon>menu</mat-icon>
+        <span class="text-xl font-bold">INVENTORY MANAGEMENT</span>
+    </button>
+
+    <button class="logout" (click)="onLogout()">Logout</button>
+    <form class="d-flex">
+        <input class="form-control me-2" type="text" placeholder="Search">
+        <button type="button">
+            <mat-icon>search</mat-icon></button>
+    </form>
+    <button class="logreg" type="button" routerLink="/login">Login/Register</button>
+</mat-toolbar>
+
+
+
+<!-- <mat-toolbar style="background-color: rgb(155, 155, 219);">
+    <button routerLink="/homepage">
+        <mat-icon>menu</mat-icon>
+    </button>
+    <span class="text-xl font-bold">INVENTORY MANAGEMENT</span>
+    <form class="d-flex">
+        <input class="form-control me-2" type="text" placeholder="Search">
+        <button type="button">
+            <mat-icon>search</mat-icon>
+        </button>
+    </form>
+    <button class="logreg" type="button" *ngIf="!isLoggedIn; else logoutTemplate" routerLink="/login">
+        Login/Register
+    </button>
+    <ng-template #logoutTemplate>
+        <button class="logreg" type="button" (click)="onLogout()">Logout</button>
+    </ng-template>
+</mat-toolbar> -->

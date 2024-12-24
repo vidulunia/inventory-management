@@ -1,0 +1,33 @@
+<form [formGroup]="loginForm" (ngSubmit)="log($event)" class="border border-dark p-3 rounded-3">
+    <div class="row g-0">
+        <div class="col text-center" font>
+            <span class="text-xl font-bold">LOGIN FORM</span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <label for="username">USERNAME </label>
+            <input type="text" class="form-control" name="username" formControlName="username">
+            <div class="form-text"></div>
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <label for="password">PASSWORD </label>
+            <input type="text" class="form-control" name="password" formControlName="password">
+            <div class="form-text"></div>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-6 offset-3">
+            <div class="d-grid">
+                <button type="submit" style="background-color: rgb(183, 179, 233);" class="text-xl">SUBMIT</button>
+                <br>
+                <span style="text-align: center;" class="text-xl">Haven't registered yet?<a href="/register">
+                        Register</a></span>
+            </div>
+        </div>
+    </div>
+</form>

@@ -1,0 +1,38 @@
+<div class="cart-container">
+    <h1 class="text-xl font-bold" style="text-align: center;">Your Cart</h1>
+    <br>
+    <div *ngIf="cart.length > 0; else emptyCart">
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+            <ng-container matColumnDef="product_name">
+                <th mat-header-cell *matHeaderCellDef>Product Name</th>
+                <td mat-cell *matCellDef="let item">{{ item.product_name }}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="quantity">
+                <th mat-header-cell *matHeaderCellDef>Quantity</th>
+                <td mat-cell *matCellDef="let element">
+                    <div class="quantity-container">
+                        <button class="quantity-btn" (click)="updateQuantity(element, -1)">-</button>
+                        <input type="number" class="quantity-input" [value]="element.quantity" readonly>
+                        <button class="quantity-btn" (click)="updateQuantity(element, 1)">+</button>
+                    </div>
+                </td>
+            </ng-container>
+            <ng-container matColumnDef="actions">
+                <th mat-header-cell *matHeaderCellDef>Actions</th>
+                <td mat-cell *matCellDef="let item">
+                    <button class="oval-btn" (click)="removefromcart(item)">Remove</button>
+                </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+    </div>
+    <br>
+    <button mat-raised-button color="warn" (click)="clearcart()">Clear Cart</button>
+
+    <ng-template #emptyCart>
+        <p style="text-align: center;">Your cart is empty!</p>
+    </ng-template>
+</div>

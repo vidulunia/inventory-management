@@ -1,0 +1,35 @@
+<div class="profile-container">
+    <h3>Welcome, {{ username }}!</h3>
+    <br>
+    <mat-card class="settings-card">
+        <form [formGroup]="profileForm">
+            <mat-tab-group>
+                <mat-tab label="Profile"><br>
+                    <mat-card appearance="outlined">
+                        <mat-card-content style="font-size:medium;">Username:
+                            <input style="font-size: large;" matInput formControlName="username">
+                        </mat-card-content>
+                    </mat-card>
+                    <mat-card appearance="outlined">
+                        <mat-card-content style="font-size:medium;"> Password:
+                            <input style="font-size: large;" matInput formControlName="password" type="password">
+                        </mat-card-content>
+                    </mat-card>
+                </mat-tab>
+                <mat-tab routerLink="/orderhistory" label="Order History">
+                    <br>
+                    <mat-card appearance="outlined">
+                        <mat-card-content style="font-size:medium;">No order history</mat-card-content>
+                    </mat-card>
+                </mat-tab><mat-icon>
+                    history
+                </mat-icon>
+                <mat-tab routerLink="/paymenthistory" label="Payment History">
+                    <br>
+                    <mat-card appearance="outlined">
+                        <mat-card-content style="font-size:medium;">No Payments history</mat-card-content>
+                    </mat-card>
+                </mat-tab>
+            </mat-tab-group>
+        </form>
+    </mat-card>
