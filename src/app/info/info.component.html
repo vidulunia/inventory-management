@@ -1,0 +1,15 @@
+<mat-progress-spinner *ngIf="loading" mode="indeterminate"></mat-progress-spinner>
+
+<div *ngIf="!loading && product" class="product-details">
+    <h2>Product Details</h2>
+    <div class="product-info">
+        <p><strong>Product ID: </strong> {{ product?.prouct_id }}</p>
+        <p><strong>Product Name: </strong> {{ product?.product_name }}</p>
+        <p><strong>Brand Name: </strong> {{ product?.brand_name }}</p>
+        <p><strong>Product Price: </strong> {{ product?.product_price | currency:'INR':'symbol' }}</p>
+    </div>
+</div>
+
+<div *ngIf="!loading && !product">
+    <p>No product details available.</p>
+</div>
