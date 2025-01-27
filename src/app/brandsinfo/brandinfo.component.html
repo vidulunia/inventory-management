@@ -1,0 +1,10 @@
+<div *ngIf="brandDetails; else noData">
+    <h1>Brand Details</h1>
+    <p><strong>Brand ID:</strong> {{ brandDetails.brand_id }}</p>
+    <p><strong>Brand Name:</strong> {{ brandDetails.brand_name }}</p>
+    <p><strong>Product Name:</strong> {{ brandDetails.product_name }}</p>
+</div>
+
+<ng-template #noData>
+    <p>No details found for this brand.</p>
+</ng-template>
